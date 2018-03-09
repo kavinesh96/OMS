@@ -92,6 +92,23 @@ public class MainClass extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        UserUpdatePage = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
         customer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -564,6 +581,114 @@ public class MainClass extends javax.swing.JFrame {
 
         admin.add(addCustomer, "card2");
 
+        jLabel17.setText("ADD Customer");
+
+        jLabel18.setText("Email :");
+
+        jLabel19.setText("Name :");
+
+        jLabel20.setText("Password :");
+
+        jLabel21.setText("Contact :");
+
+        jLabel22.setText("Address :");
+
+        jTextField12.setEditable(false);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane4.setViewportView(jTextArea3);
+
+        jButton15.setText("Update");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Back");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setText("ID :");
+
+        javax.swing.GroupLayout UserUpdatePageLayout = new javax.swing.GroupLayout(UserUpdatePage);
+        UserUpdatePage.setLayout(UserUpdatePageLayout);
+        UserUpdatePageLayout.setHorizontalGroup(
+            UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                        .addGap(314, 314, 314)
+                        .addComponent(jLabel17))
+                    .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel23))
+                        .addGap(35, 35, 35)
+                        .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton16)
+                            .addComponent(jScrollPane4)
+                            .addComponent(jTextField15)
+                            .addComponent(jTextField14)
+                            .addComponent(jTextField13)
+                            .addComponent(jTextField12)
+                            .addComponent(jTextField2))))
+                .addContainerGap(245, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserUpdatePageLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton15)
+                .addGap(237, 237, 237))
+        );
+        UserUpdatePageLayout.setVerticalGroup(
+            UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23))
+                .addGap(16, 16, 16)
+                .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)))
+                    .addGroup(UserUpdatePageLayout.createSequentialGroup()
+                        .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel18)
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel20)))
+                .addGap(18, 18, 18)
+                .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel22)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(UserUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton15)
+                    .addComponent(jButton16))
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+
+        admin.add(UserUpdatePage, "card7");
+
         mainPanel.add(admin, "card4");
 
         javax.swing.GroupLayout customerLayout = new javax.swing.GroupLayout(customer);
@@ -715,8 +840,56 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        HelperAPI.changeFrame(admin, UserUpdatePage);
+        int rowNum = jTable1.getSelectedRow();
+        int ID = Integer.parseInt(String.valueOf(dtm.getValueAt(rowNum, 0)));
+        for (User u : new HelperAPI().ReadUsers()) {
+            if (u.getId() == ID) {
+                jTextField12.setText(String.valueOf(u.getId()));
+                jTextField2.setText(u.getName());
+                jTextField13.setText(u.getEmail());
+                jTextField14.setText(u.getPassword());
+                jTextField15.setText(u.getContact());
+                jTextArea3.setText(u.getAddress());
+                
+            }
+        }
+
+
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        HelperAPI.changeFrame(admin, Admin_Customer_Registration);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        
+        if (JOptionPane.showConfirmDialog(this, "Update the customer ?", "Confirmation Dialogue", JOptionPane.YES_NO_OPTION) == 0) {
+
+            for (User u : new HelperAPI().ReadUsers()) {
+                if (u.getId() != Integer.parseInt(jTextField12.getText())) {
+                    new HelperAPI().updateUserInformation(u);
+                }else{
+                
+                    u.setName(jTextField2.getText());
+                    u.setEmail(jTextField13.getText());
+                    u.setPassword(jTextField14.getText());
+                    u.setContact(jTextField15.getText());
+                    u.setAddress(jTextArea3.getText());
+                    
+                    
+                new HelperAPI().updateUserInformation(u);
+                }
+            }
+            new HelperAPI().DeleteFile(new File("user.ser"), new File("temp.ser"), new File("user.ser"));
+            new HelperAPI().UpdateUserDataTable(jTable1);
+            jButton9.setEnabled(false);
+            jButton10.setEnabled(false);
+            JOptionPane.showMessageDialog(null, "User data updated successfully", "Success Message", JOptionPane.INFORMATION_MESSAGE);
+        HelperAPI.changeFrame(admin, Admin_Customer_Registration);
+        }
+        
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -758,6 +931,7 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JPanel Admin_Customer_Registration;
     private javax.swing.JPanel Order;
     private javax.swing.JPanel Product;
+    private javax.swing.JPanel UserUpdatePage;
     private javax.swing.JPanel addCustomer;
     private javax.swing.JPanel admin;
     private javax.swing.JPanel customer;
@@ -767,6 +941,8 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -785,7 +961,14 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -797,12 +980,19 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
