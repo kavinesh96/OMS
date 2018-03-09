@@ -13,18 +13,22 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import object.User;
+import static oms.MainClass.dtm;
 
 /**
  *
  * @author Kavinesh
  */
-public class HelperAPI implements Serializable{
-    
-    public static void changeFrame(JPanel rootPanel, JPanel newPanel){
+public class HelperAPI implements Serializable {
+
+    public static void changeFrame(JPanel rootPanel, JPanel newPanel) {
         rootPanel.removeAll();
         rootPanel.repaint();
         rootPanel.revalidate();
@@ -32,10 +36,36 @@ public class HelperAPI implements Serializable{
         rootPanel.repaint();
         rootPanel.revalidate();
     }
-    
-    
-    
-     public void RegisterUser(User user) {
+
+    public void DeleteFile(File f1, File f2, File f3) {
+        f1.delete();
+        f2.renameTo(f3);
+    }
+
+    public void updateUserInformation(User user) {
+        File f = new File("temp.ser");
+        try {
+            FileOutputStream fos = new FileOutputStream("temp.ser", true);
+            if (f.length() == 0) {
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(user);
+                oos.close();
+                fos.close();
+            } else {
+                NoHeaderObjectOutputStream Noos = new NoHeaderObjectOutputStream(fos);
+                Noos.writeObject(user);
+                Noos.close();
+                fos.close();
+            }
+
+        } catch (FileNotFoundException ex) {
+        } catch (IOException ex) {
+
+        }
+
+    }
+
+    public void RegisterUser(User user) {
         File f = new File("user.ser");
 
         try {
@@ -54,38 +84,86 @@ public class HelperAPI implements Serializable{
             }
 
         } catch (FileNotFoundException ex) {
-            
+
         } catch (IOException ex) {
-           
+
         }
 
     }
-     
-     
-     
-     public void userLogin(String email, String passwrod){
+
+    public boolean userLogin(String email, String password, String role) {
+        boolean flag = false;
+        for (User u : this.ReadUsers()) {
+            if (u.getEmail().equals(email) && u.getPassword().equals(password) && u.getRole().equals(role)) {
+                flag = true;
+                break;
+            }
+        }
+
+        return flag;
+    }
+
+    public ArrayList<User> ReadUsers() {
+        ArrayList<User> Users = new ArrayList<User>();
         FileInputStream fis = null;
         ObjectInputStream ois = null;
 
-     
         try {
             fis = new FileInputStream("user.ser");
             ois = new ObjectInputStream(fis);
-            
             User u = null;
             while ((u = (User) ois.readObject()) != null) {
-                System.out.println(u.getAddress());
-                System.out.println(u.getName());
+                Users.add(u);
             }
-            
         } catch (FileNotFoundException ex) {
-//            Logger.getLogger(HelperAPI.class.getName()).log(Level.SEVERE, null, ex);
+
         } catch (IOException ex) {
-//            Logger.getLogger(HelperAPI.class.getName()).log(Level.SEVERE, null, ex);
+
         } catch (ClassNotFoundException ex) {
-//            Logger.getLogger(HelperAPI.class.getName()).log(Level.SEVERE, null, ex);
+
+        } finally {
+            try {
+                ois.close();
+                fis.close();
+            } catch (IOException ex) {
+
+            }
+
         }
-           
-       
-     }
+        return Users;
+    }
+
+    public int getLastID() {
+        int ID = 22222;
+        File f = new File("user.ser");
+        if (f.length() == 0) {
+            return ID;
+        } else {
+            for (User user : this.ReadUsers()) {
+                ID = user.getId();
+            }
+
+            return ID + 1;
+        }
+    }
+
+    public void UpdateUserDataTable(JTable jTable1) {
+
+        dtm = new DefaultTableModel();
+        dtm.addColumn("ID");
+        dtm.addColumn("Name");
+        dtm.addColumn("Email");
+        dtm.addColumn("Password");
+        dtm.addColumn("Contact");
+        dtm.addColumn("Address");
+
+        for (User user : new HelperAPI().ReadUsers()) {
+            dtm.addRow(new Object[]{user.getId(), user.getName(), user.getEmail(), user.getPassword(), user.getContact(), user.getAddress()});
+        }
+
+        jTable1.setModel(dtm);
+        jTable1.updateUI();
+
+    }
+
 }
