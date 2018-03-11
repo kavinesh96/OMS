@@ -92,6 +92,32 @@ public class HelperAPI implements Serializable {
 
     }
 
+    public void RegisterProducts(Product user) {
+        File f = new File("products.ser");
+
+        try {
+            FileOutputStream fos = new FileOutputStream("products.ser", true);
+            if (f.length() == 0) {
+
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(user);
+                oos.close();
+                fos.close();
+            } else {
+                NoHeaderObjectOutputStream Noos = new NoHeaderObjectOutputStream(fos);
+                Noos.writeObject(user);
+                Noos.close();
+                fos.close();
+            }
+
+        } catch (FileNotFoundException ex) {
+
+        } catch (IOException ex) {
+
+        }
+
+    }
+
     public boolean userLogin(String email, String password, String role) {
         boolean flag = false;
         for (User u : this.ReadUsers()) {
@@ -133,10 +159,8 @@ public class HelperAPI implements Serializable {
         }
         return Users;
     }
-    
-    
-    
-     public ArrayList<Product> ReadProducts() {
+
+    public ArrayList<Product> ReadProducts() {
         ArrayList<Product> products = new ArrayList<Product>();
         FileInputStream fis = null;
         ObjectInputStream ois = null;
@@ -180,6 +204,20 @@ public class HelperAPI implements Serializable {
         }
     }
 
+    public int getProductLastID() {
+        int ID = 55555;
+        File f = new File("products.ser");
+        if (f.length() == 0) {
+            return ID;
+        } else {
+            for (Product p : this.ReadProducts()) {
+                ID = p.getID();
+            }
+
+            return ID + 1;
+        }
+    }
+
     public void UpdateUserDataTable(JTable jTable1) {
 
         dtm = new DefaultTableModel();
@@ -199,10 +237,9 @@ public class HelperAPI implements Serializable {
         jTable1.updateUI();
 
     }
-    
-    
-    public void UpdateProductDataTable(JTable table1){
-     dtm = new DefaultTableModel();
+
+    public void UpdateProductDataTable(JTable table1) {
+        dtm = new DefaultTableModel();
         dtm.addColumn("ID");
         dtm.addColumn("Name");
         dtm.addColumn("Type");
@@ -215,6 +252,6 @@ public class HelperAPI implements Serializable {
 
         table1.setModel(dtm);
         table1.updateUI();
-    } 
-   
+    }
+
 }

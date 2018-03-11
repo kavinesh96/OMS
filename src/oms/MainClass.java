@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import object.User;
 import object.Product;
+
 /**
  *
  * @author Kavinesh
@@ -126,11 +127,11 @@ public class MainClass extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
+        jComboBox4 = new javax.swing.JComboBox<>();
         customer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -172,7 +173,7 @@ public class MainClass extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Cambria", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(204, 0, 153));
         jLabel11.setText(" Welcome To Alpha Ordering System");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 255, 255))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(153, 255, 255))); // NOI18N
 
         jCheckBox1.setText("Show Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +240,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         mainPanel.add(login, "card3");
@@ -344,7 +345,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addGroup(registrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
         mainPanel.add(registration, "card2");
@@ -398,7 +399,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         admin.add(AdminHome, "card2");
@@ -469,7 +470,7 @@ public class MainClass extends javax.swing.JFrame {
         Admin_Customer_RegistrationLayout.setVerticalGroup(
             Admin_Customer_RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Admin_Customer_RegistrationLayout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(60, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
             .addGroup(Admin_Customer_RegistrationLayout.createSequentialGroup()
@@ -566,7 +567,7 @@ public class MainClass extends javax.swing.JFrame {
                         .addComponent(jButton19)
                         .addGap(53, 53, 53)
                         .addComponent(jButton20)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         admin.add(Admin_Product_Registration, "card4");
@@ -579,7 +580,7 @@ public class MainClass extends javax.swing.JFrame {
         );
         OrderLayout.setVerticalGroup(
             OrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 494, Short.MAX_VALUE)
+            .addGap(0, 531, Short.MAX_VALUE)
         );
 
         admin.add(Order, "card5");
@@ -698,7 +699,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addGroup(addCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
                     .addComponent(jButton12))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         admin.add(addCustomer, "card2");
@@ -871,6 +872,8 @@ public class MainClass extends javax.swing.JFrame {
             }
         });
 
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fragile", "Non-Fragile", "Light", "Heavy" }));
+
         javax.swing.GroupLayout addProductLayout = new javax.swing.GroupLayout(addProduct);
         addProduct.setLayout(addProductLayout);
         addProductLayout.setHorizontalGroup(
@@ -888,9 +891,10 @@ public class MainClass extends javax.swing.JFrame {
                                 .addComponent(jLabel25))
                             .addGroup(addProductLayout.createSequentialGroup()
                                 .addGap(32, 32, 32)
-                                .addGroup(addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(addProductLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(addProductLayout.createSequentialGroup()
                         .addGroup(addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel29)
@@ -905,7 +909,7 @@ public class MainClass extends javax.swing.JFrame {
                                 .addComponent(jButton22)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton21)))))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         addProductLayout.setVerticalGroup(
             addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -919,7 +923,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -932,7 +936,7 @@ public class MainClass extends javax.swing.JFrame {
                 .addGroup(addProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton22)
                     .addComponent(jButton21))
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         admin.add(addProduct, "card8");
@@ -947,7 +951,7 @@ public class MainClass extends javax.swing.JFrame {
         );
         customerLayout.setVerticalGroup(
             customerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 494, Short.MAX_VALUE)
+            .addGap(0, 531, Short.MAX_VALUE)
         );
 
         mainPanel.add(customer, "card5");
@@ -1099,7 +1103,7 @@ public class MainClass extends javax.swing.JFrame {
                 jTextField14.setText(u.getPassword());
                 jTextField15.setText(u.getContact());
                 jTextArea3.setText(u.getAddress());
-               
+
                 jComboBox3.setSelectedItem(u.getRole());
             }
         }
@@ -1112,23 +1116,22 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        
+
         if (JOptionPane.showConfirmDialog(this, "Update the customer ?", "Confirmation Dialogue", JOptionPane.YES_NO_OPTION) == 0) {
 
             for (User u : new HelperAPI().ReadUsers()) {
                 if (u.getId() != Integer.parseInt(jTextField12.getText())) {
                     new HelperAPI().updateUserInformation(u);
-                }else{
-                
+                } else {
+
                     u.setName(jTextField2.getText());
                     u.setEmail(jTextField13.getText());
                     u.setPassword(jTextField14.getText());
                     u.setContact(jTextField15.getText());
                     u.setAddress(jTextArea3.getText());
                     u.setRole(jComboBox3.getItemAt(jComboBox3.getSelectedIndex()));
-                    
-                    
-                new HelperAPI().updateUserInformation(u);
+
+                    new HelperAPI().updateUserInformation(u);
                 }
             }
             new HelperAPI().DeleteFile(new File("user.ser"), new File("temp.ser"), new File("user.ser"));
@@ -1136,14 +1139,13 @@ public class MainClass extends javax.swing.JFrame {
             jButton9.setEnabled(false);
             jButton10.setEnabled(false);
             JOptionPane.showMessageDialog(null, "User Data updated successfully", "Success Message", JOptionPane.INFORMATION_MESSAGE);
-        HelperAPI.changeFrame(admin, Admin_Customer_Registration);
+            HelperAPI.changeFrame(admin, Admin_Customer_Registration);
         }
-        
+
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-//        new HelperAPI().UpdateProductDataTable(jTable2);
+        new HelperAPI().UpdateProductDataTable(table1);
         HelperAPI.changeFrame(admin, Admin_Product_Registration);
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1152,9 +1154,9 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_table1MouseClicked
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        
+
         HelperAPI.changeFrame(admin, addProduct);
-        
+
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
@@ -1186,7 +1188,28 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        
+        Product p = new Product();
+
+        try {
+            p.setID(new HelperAPI().getProductLastID());
+            p.setName(jTextField3.getText());
+            p.setPrice(Double.valueOf(jTextField17.getText()));
+            p.setStock(Integer.valueOf(jTextField18.getText()));
+            p.setType(jComboBox4.getItemAt(jComboBox4.getSelectedIndex()));
+            new HelperAPI().RegisterProducts(p);
+            JOptionPane.showMessageDialog(null, "Successfully Added", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            jTextField3.setText("");
+            jTextField17.setText("");
+            jTextField18.setText("");
+            new HelperAPI().UpdateProductDataTable(table1);
+            HelperAPI.changeFrame(admin, Admin_Product_Registration);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Please Input Valid Input", "Error Message", JOptionPane.ERROR_MESSAGE);
+        }
+
+
     }//GEN-LAST:event_jButton21ActionPerformed
 
     /**
@@ -1260,6 +1283,7 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1306,7 +1330,6 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
