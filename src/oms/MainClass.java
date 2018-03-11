@@ -849,7 +849,7 @@ public class MainClass extends javax.swing.JFrame {
         u.setPassword(jTextField6.getText());
         u.setContact(jTextField7.getText());
         u.setAddress(jTextArea1.getText());
-        u.setRole("customer");
+        u.setRole("admin");
 
         new HelperAPI().RegisterUser(u);
         jTextField4.setText("");
@@ -1019,7 +1019,7 @@ public class MainClass extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        new HelperAPI().UpdateProductDataTable(jTable2);
+//        new HelperAPI().UpdateProductDataTable(jTable2);
         HelperAPI.changeFrame(admin, Admin_Product_Registration);
     }//GEN-LAST:event_jButton6ActionPerformed
 
