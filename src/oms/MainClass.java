@@ -132,6 +132,18 @@ public class MainClass extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jComboBox4 = new javax.swing.JComboBox<>();
+        ProductUpdatePage = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         customer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -173,7 +185,7 @@ public class MainClass extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Cambria", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(204, 0, 153));
         jLabel11.setText(" Welcome To Alpha Ordering System");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(153, 255, 255))); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 3, true), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 255, 255))); // NOI18N
 
         jCheckBox1.setText("Show Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -941,6 +953,102 @@ public class MainClass extends javax.swing.JFrame {
 
         admin.add(addProduct, "card8");
 
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel30.setText("Edit Product");
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel31.setText("Name :");
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel32.setText("Type :");
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel33.setText("Price :");
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel34.setText("Stock :");
+
+        jTextField16.setText("jTextField16");
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fragile", "Non-Fragile", "Light", "Heavy" }));
+
+        jTextField19.setText("jTextField19");
+
+        jTextField20.setText("jTextField20");
+
+        jButton23.setText("Back");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        jButton24.setText("Update");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ProductUpdatePageLayout = new javax.swing.GroupLayout(ProductUpdatePage);
+        ProductUpdatePage.setLayout(ProductUpdatePageLayout);
+        ProductUpdatePageLayout.setHorizontalGroup(
+            ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProductUpdatePageLayout.createSequentialGroup()
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ProductUpdatePageLayout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel30)
+                            .addGroup(ProductUpdatePageLayout.createSequentialGroup()
+                                .addComponent(jButton23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addComponent(jButton24))))
+                    .addGroup(ProductUpdatePageLayout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel34)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jComboBox5, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField16)
+                            .addComponent(jTextField20))))
+                .addGap(293, 293, 293))
+        );
+        ProductUpdatePageLayout.setVerticalGroup(
+            ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ProductUpdatePageLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addComponent(jLabel30)
+                .addGap(66, 66, 66)
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(ProductUpdatePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton23)
+                    .addComponent(jButton24))
+                .addContainerGap(170, Short.MAX_VALUE))
+        );
+
+        admin.add(ProductUpdatePage, "card9");
+
         mainPanel.add(admin, "card4");
 
         javax.swing.GroupLayout customerLayout = new javax.swing.GroupLayout(customer);
@@ -1150,7 +1258,8 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table1MouseClicked
-        // TODO add your handling code here:
+         jButton18.setEnabled(true);
+            jButton19.setEnabled(true);
     }//GEN-LAST:event_table1MouseClicked
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -1160,11 +1269,30 @@ public class MainClass extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
+
+        int rowNum = table1.getSelectedRow();
+        int ID = Integer.parseInt(String.valueOf(dtm.getValueAt(rowNum, 0)));
+        if (JOptionPane.showConfirmDialog(this, "Delete the product ?", "Confirmation Dialogue", JOptionPane.YES_NO_OPTION) == 0) {
+
+            for (Product p : new HelperAPI().ReadProducts()) {
+                if (p.getID() != ID) {
+                    new HelperAPI().updateProductInformation(p);
+                }
+            }
+
+            new HelperAPI().DeleteFile(new File("products.ser"), new File("temp.ser"), new File("products.ser"));
+            new HelperAPI().UpdateProductDataTable(table1);
+
+        }
+
+      
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
+        HelperAPI.changeFrame(admin,ProductUpdatePage);
+        int rowNum = table1.getSelectedRow();
+        
+        
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -1212,6 +1340,15 @@ public class MainClass extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton21ActionPerformed
 
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton24ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1252,6 +1389,7 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JPanel Admin_Customer_Registration;
     private javax.swing.JPanel Admin_Product_Registration;
     private javax.swing.JPanel Order;
+    private javax.swing.JPanel ProductUpdatePage;
     private javax.swing.JPanel UserUpdatePage;
     private javax.swing.JPanel addCustomer;
     private javax.swing.JPanel addProduct;
@@ -1272,6 +1410,8 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1284,6 +1424,7 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1307,6 +1448,11 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1330,9 +1476,12 @@ public class MainClass extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

@@ -65,6 +65,30 @@ public class HelperAPI implements Serializable {
         }
 
     }
+    
+    
+    public void updateProductInformation(Product user) {
+        File f = new File("temp.ser");
+        try {
+            FileOutputStream fos = new FileOutputStream("temp.ser", true);
+            if (f.length() == 0) {
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(user);
+                oos.close();
+                fos.close();
+            } else {
+                NoHeaderObjectOutputStream Noos = new NoHeaderObjectOutputStream(fos);
+                Noos.writeObject(user);
+                Noos.close();
+                fos.close();
+            }
+
+        } catch (FileNotFoundException ex) {
+        } catch (IOException ex) {
+
+        }
+
+    }
 
     public void RegisterUser(User user) {
         File f = new File("user.ser");
