@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import object.Product;
 import object.User;
 import static oms.MainClass.dtm;
 
@@ -132,6 +133,38 @@ public class HelperAPI implements Serializable {
         }
         return Users;
     }
+    
+    
+    
+     public ArrayList<Product> ReadProducts() {
+        ArrayList<Product> products = new ArrayList<Product>();
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+
+        try {
+            fis = new FileInputStream("products.ser");
+            ois = new ObjectInputStream(fis);
+            Product u = null;
+            while ((u = (Product) ois.readObject()) != null) {
+                products.add(u);
+            }
+        } catch (FileNotFoundException ex) {
+
+        } catch (IOException ex) {
+
+        } catch (ClassNotFoundException ex) {
+
+        } finally {
+            try {
+                ois.close();
+                fis.close();
+            } catch (IOException ex) {
+
+            }
+
+        }
+        return products;
+    }
 
     public int getLastID() {
         int ID = 22222;
@@ -156,14 +189,32 @@ public class HelperAPI implements Serializable {
         dtm.addColumn("Password");
         dtm.addColumn("Contact");
         dtm.addColumn("Address");
+        dtm.addColumn("Role");
 
         for (User user : new HelperAPI().ReadUsers()) {
-            dtm.addRow(new Object[]{user.getId(), user.getName(), user.getEmail(), user.getPassword(), user.getContact(), user.getAddress()});
+            dtm.addRow(new Object[]{user.getId(), user.getName(), user.getEmail(), user.getPassword(), user.getContact(), user.getAddress(), user.getRole()});
         }
 
         jTable1.setModel(dtm);
         jTable1.updateUI();
 
     }
+    
+    
+    public void UpdateProductDataTable(JTable table1){
+     dtm = new DefaultTableModel();
+        dtm.addColumn("ID");
+        dtm.addColumn("Name");
+        dtm.addColumn("Type");
+        dtm.addColumn("Stock");
+        dtm.addColumn("Price");
 
+        for (Product user : new HelperAPI().ReadProducts()) {
+            dtm.addRow(new Object[]{user.getID(), user.getName(), user.getType(), user.getStock(), user.getPrice()});
+        }
+
+        table1.setModel(dtm);
+        table1.updateUI();
+    } 
+   
 }

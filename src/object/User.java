@@ -12,6 +12,8 @@ import java.io.Serializable;
  * @author Kavinesh
  */
 public class User implements Serializable{
+
+    
     
     
     private int id;
@@ -21,6 +23,8 @@ public class User implements Serializable{
     private String contact;
     private String address;
     private String role;
+    
+   
 
     public User(int id, String name, String email, String password, String contact, String address, String role) {
         this.id = id;
@@ -134,6 +138,5 @@ public class User implements Serializable{
     public void setAddress(String address) {
         this.address = address;
     }
-   
-    
+         
 }
